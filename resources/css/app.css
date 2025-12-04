@@ -1,0 +1,23 @@
+@import "tailwindcss" theme(static);
+@source "../views/";
+@source "../../app/";
+<<<<<<< HEAD
+
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  @apply font-sans bg-[#F3F4FF];
+}
+
+a {
+  @apply no-underline;
+}
+
+nav ul li a:hover {
+  @apply underline;
+}
+=======
+>>>>>>> 7920ac9eae20e7f12e62f496a41561c5c48eca1b
