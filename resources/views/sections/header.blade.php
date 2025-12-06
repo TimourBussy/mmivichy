@@ -1,12 +1,19 @@
 <header class="sticky flex h-[95px] w-full items-center justify-between pl-7 pr-[69px] py-[21px]">
   <img src="{{ asset('logo.png') }}" alt="Logo MMI" class="h-[54px]">
 
-  <nav class="">
+  @php
+    $items = wp_get_nav_menu_items('primary_navigation');
+  @endphp
+
+  <nav>
     <ul class="flex space-x-8 items-center gap-[66px] font-bold text-2xl">
-      <li><a href="">À propos</a></li>
-      <li><a href="">Formation</a></li>
-      <li><a href="">Admissions</a></li>
-      <li><a href="">Actualités</a></li>
+      @foreach ($items as $item)
+        <li>
+          <a href="{{ $item->url }}">
+            {{ $item->title }}
+          </a>
+        </li>
+      @endforeach
     </ul>
   </nav>
 
