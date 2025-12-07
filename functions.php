@@ -58,3 +58,5 @@ collect(['setup', 'filters'])
             );
         }
     });
+
+add_image_size('logo-header', 155, 66, true);

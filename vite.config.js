@@ -5,6 +5,14 @@ import { wordpressPlugin, wordpressThemeJson } from '@roots/vite-plugin';
 
 export default defineConfig({
   base: '/app/themes/sage/public/build/',
+  server: {
+    host: '127.0.0.1',
+    port: 5173,
+    hmr: {
+      host: '127.0.0.1',
+      port: 5173,
+    },
+  },
   plugins: [
     tailwindcss(),
     laravel({
